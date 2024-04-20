@@ -6,7 +6,7 @@ class Fanspeed_Form(FlaskForm):
     speed = IntegerField('Speed Percentage', validators=[NumberRange(min=5, max=100, message="Value must be between 5% and 100%"), DataRequired()])
     submit = SubmitField('Apply')
 
-class IPMI_Setting_Form(FlaskForm):
+class IPMI_Form(FlaskForm):
     host = StringField("IPMI Hostname")
     user = StringField("IPMI Username")
     passwd = PasswordField("IPMI Password")
