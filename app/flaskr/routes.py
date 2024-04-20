@@ -9,7 +9,7 @@ import ipmitools
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
-def index():
+def fan_control():
     control_form = forms.Fanspeed_Form() 
     
     if control_form.validate_on_submit():
@@ -26,14 +26,14 @@ def index():
             flask.flash(result or f"Fans set to {control_form.speed.data}%")
 
     return flask.render_template(
-        'index.html',
+        'fan_control.html',
         MANUAL_MODE=config.MANUAL_MODE,
         form=control_form
     )
 
 @app.route('/configure', methods=['GET', 'POST'])
-def configure():
-    configure_form = forms.Configure_Form()
+def ipmi_settings():
+    configure_form = forms.ipmi_settings_Form()
 
     if configure_form.validate_on_submit():
         config.IPMI_HOST = configure_form.host.data or config.IPMI_HOST
