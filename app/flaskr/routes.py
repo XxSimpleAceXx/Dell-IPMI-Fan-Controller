@@ -32,8 +32,8 @@ def fan_control():
     )
 
 @app.route('/configure', methods=['GET', 'POST'])
-def ipmi_settings():
-    configure_form = forms.IPMI_Setting_Form()
+def configure():
+    configure_form = forms.IPMI_form()
 
     if configure_form.validate_on_submit():
         config.IPMI_HOST = configure_form.host.data or config.IPMI_HOST
