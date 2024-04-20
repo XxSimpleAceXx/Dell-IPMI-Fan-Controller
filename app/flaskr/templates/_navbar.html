@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{{ url_for('index') }}">
+        <a class="navbar-brand" href="{{ url_for('fan_control') }}">
             IPMI Tools
         </a>
 
@@ -9,8 +9,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav mr-auto">
-                <a class="nav-link" href="{{ url_for('index') }}">Control</a>
-                <a class="nav-link" href="{{ url_for('configure') }}">Configure</a>
+                <a class="nav-link" href="{{ url_for('fan_control') }}">Fan Settings</a>
+                <a class="nav-link" href="{{ url_for('configure') }}">IPMI Settings</a>
+                <a class="nav-link" href="{{ url_for('console') }}">Console Output</a>
             </div>
         </div>
 </nav>
