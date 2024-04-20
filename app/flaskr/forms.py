@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextA
 from wtforms.validators import DataRequired, NumberRange
 
 class Fanspeed_Form(FlaskForm):
-    speed = IntegerField('Speed Percentage', validators=[NumberRange(min=10, max=100, message="Value must be between 10% and 100%"), DataRequired()])
+    speed = IntegerField('Speed Percentage', validators=[NumberRange(min=5, max=100, message="Value must be between 5% and 100%"), DataRequired()])
     submit = SubmitField('Apply')
 
 class Configure_Form(FlaskForm):
