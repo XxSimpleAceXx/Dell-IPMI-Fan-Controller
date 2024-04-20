@@ -48,7 +48,7 @@ def configure():
 
 @app.route('/set_manual_mode')
 
-def configure():
+def console():
 #insery console stuff here later
 
 @app.route('/console', methods=['GET', 'POST'])
