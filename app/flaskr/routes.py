@@ -45,12 +45,7 @@ def configure():
         'configure.html',
         form=configure_form
     )
-
-
-@app.route('/console', methods=['GET', 'POST'])
-def console():
-#insery console stuff here later
-
+    
 @app.route('/set_manual_mode')
 def set_manual_mode():
     if None in [config.IPMI_HOST, config.IPMI_USER, config.IPMI_PASS]:
