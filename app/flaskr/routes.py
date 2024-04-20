@@ -46,13 +46,12 @@ def configure():
         form=configure_form
     )
 
-@app.route('/set_manual_mode')
 
+@app.route('/console', methods=['GET', 'POST'])
 def console():
 #insery console stuff here later
 
-@app.route('/console', methods=['GET', 'POST'])
-
+@app.route('/set_manual_mode')
 def set_manual_mode():
     if None in [config.IPMI_HOST, config.IPMI_USER, config.IPMI_PASS]:
         logging.error("MANUAL MODE NOT SET: A required enviroment variable has not been set.")
