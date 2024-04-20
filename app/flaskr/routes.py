@@ -8,7 +8,7 @@ import config
 import ipmitools
 
 @app.route('/', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/fan_control', methods=['GET', 'POST'])
 def fan_control():
     control_form = forms.Fanspeed_Form() 
     
